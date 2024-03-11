@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
+    <mat-nav-list>
+      <mat-list-item routerLink="/calendar" routerLinkActive="active-link">
+        <mat-icon matListItemIcon>event</mat-icon>
+        <div matListItemTitle>Calendario</div>
+      </mat-list-item>
+      <mat-list-item routerLink="/hour" routerLinkActive="active-link">
+        <mat-icon matListItemIcon>wb_sunny</mat-icon>
+        <div matListItemTitle>Hora Dorada/Azul</div>
+      </mat-list-item>
+      <mat-list-item routerLink="/weather" routerLinkActive="active-link">
+        <mat-icon matListItemIcon>cloud</mat-icon>
+        <div matListItemTitle>Clima</div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>{{ title }}</span>
+    </mat-toolbar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

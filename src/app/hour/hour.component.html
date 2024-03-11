@@ -1,0 +1,36 @@
+<div class="hour-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef>Fecha</th>
+      <td mat-cell *matCellDef="let element">{{ element.fecha }}</td>
+    </ng-container>
+
+    <!-- Hora Azul - Mañana Column -->
+    <ng-container matColumnDef="horaAzulManana">
+      <th mat-header-cell *matHeaderCellDef>Hora azul - mañana</th>
+      <td mat-cell *matCellDef="let element">{{ element.horaAzulManana }}</td>
+    </ng-container>
+
+    <!-- Hora Dorada - Mañana Column -->
+    <ng-container matColumnDef="horaDoradaManana">
+      <th mat-header-cell *matHeaderCellDef>Hora dorada - mañana</th>
+      <td mat-cell *matCellDef="let element">{{ element.horaDoradaManana }}</td>
+    </ng-container>
+
+    <!-- Hora Dorada - Noche Column -->
+    <ng-container matColumnDef="horaDoradaNoche">
+      <th mat-header-cell *matHeaderCellDef>Hora dorada - noche</th>
+      <td mat-cell *matCellDef="let element">{{ element.horaDoradaNoche }}</td>
+    </ng-container>
+
+    <!-- Hora Azul - Noche Column -->
+    <ng-container matColumnDef="horaAzulNoche">
+      <th mat-header-cell *matHeaderCellDef>Hora azul - noche</th>
+      <td mat-cell *matCellDef="let element">{{ element.horaAzulNoche }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

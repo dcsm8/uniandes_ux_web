@@ -1,0 +1,27 @@
+<div class="weather-layout">
+  <mat-card class="weather-status">
+    <mat-card-header>
+      <mat-card-title>{{ weatherToday.date }}</mat-card-title>
+      <mat-card-subtitle
+        ><h1>{{ weatherToday.status }}</h1></mat-card-subtitle
+      >
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="assets/hail.svg"
+      alt="Hail"
+      class="weather-image"
+    />
+    <mat-card-content>
+      <h1>{{ weatherToday.temperature }}</h1>
+      <div class="weather-details">
+        <h1>{{ weatherToday.humidity }}</h1>
+        <h1>{{ weatherToday.wind }}</h1>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="weather-graph">
+    <p-chart type="line" [data]="data"></p-chart>
+  </div>
+</div>

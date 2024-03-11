@@ -1,0 +1,21 @@
+/* calendar.component.scss */
+::ng-deep button.fc-today-button.fc-button.fc-button-primary {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: darken(#3f51b5, 5%);
+  }
+}
+
+::ng-deep button.fc-prev-button.fc-button.fc-button-primary,
+::ng-deep button.fc-next-button.fc-button.fc-button-primary {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: darken(#e91e63, 5%);
+  }
+}
