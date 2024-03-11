@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Agregar Nuevo Cliente</h2>
+<mat-dialog-content class="dialog-content">
+  <form>
+    <mat-form-field appearance="fill" class="full-width-input">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Ingrese el nombre" name="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width-input">
+      <mat-label>Teléfono</mat-label>
+      <input matInput placeholder="Ingrese el teléfono" name="phone" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width-input">
+      <mat-label>Empresa</mat-label>
+      <input matInput placeholder="Ingrese la empresa" name="company" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width-input">
+      <mat-label>Correo Electrónico</mat-label>
+      <input
+        matInput
+        placeholder="Ingrese el correo electrónico"
+        name="email"
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>CANCELAR</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+  >
+    CREAR
+  </button>
+</mat-dialog-actions>
